@@ -28,22 +28,11 @@ li {
     list-style-type: none;
 }
 
+/* -------------------------- Navbar -------------------------- */
+
 .navbar {
     background-color: #047aed;
-    overflow:hidden;
-}
-
-.container {
-    margin: 10px auto;
-    padding: 10px;
-    max-width: 1100px;
-    height: 70px;
-}
-
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
 }
 
 .navbar .flex {
@@ -62,8 +51,210 @@ li {
 
 .navbar a:hover {
     cursor: pointer;
-    border-bottom: #fff solid 3px;
+    border-bottom: #fff solid 2px;
     border-radius: 3px;
     padding-bottom: 4px;
 }
 
+/* -------------------------- Showcase -------------------------- */
+
+.showcase {
+    background-color: #047aed;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.showcase .grid {
+    grid-template-columns: 55% auto;
+}
+
+.showcase .container {
+    height: 100%;
+    margin: 0 10px;
+    width: 100%;
+    justify-self: center;
+}
+
+.showcase-form {
+    height: 350px;
+    width: 400px;
+    margin: 10px;
+    overflow: visible;
+    z-index: 100;
+    position: relative;
+    top: 40px;
+}
+
+.showcase-form h2 {
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.showcase input[type="text"],
+.showcase input[type="email"] {
+    font-size: 16px;
+    width: 85%;
+    border: unset;
+    border-bottom: 1px #333 solid;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.showcase input:focus {
+    outline: none;
+    transform: scale(1.02);
+}
+
+.showcase input:hover {
+    transform: scale(1.02);
+}
+
+.form-control {
+    text-align: center;
+}
+
+.showcase-text {
+    color: #fff;
+    position: relative;
+    top: -30px;
+}
+
+.showcase-text h2 {
+    margin: 30px 20px;
+    font-weight: 300;
+    font-size: 36px;
+}
+
+.showcase-text p {
+    margin: 10px 20px;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.showcase-form .btn {
+    height: 40px;
+    width: 100px;
+    margin: 15px auto;
+}
+
+.showcase-form .btn:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.showcase-text .btn {
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    padding: 8px 10px;
+    margin: 10px 20px;
+}
+
+.showcase-text .btn:hover {
+    transform: scale(0.98);
+}
+
+.showcase::before,
+.showcase::after {
+    content: "";
+    position: absolute;
+    height: 120px;
+    bottom: -70px;
+    right: 0;
+    left: -200px;
+    background-color: #fff;
+    transform: skewY(-5deg);
+}
+
+/* -------------------------- stats -------------------------- */
+
+.stat-item {
+    text-align: center;
+}
+
+.stats-header {
+    max-width: 700px;
+    margin: 10px auto;
+    padding: 60px 0;
+    text-align: center;
+    font-weight: 300;
+    font-size: 27px;
+
+}
+
+.stats i {
+    color: #333;
+    font-size: 70px;
+    padding: 10px;
+}
+
+.stat-item h3 {
+    padding: 5px;
+    font-size: 30px;
+}
+
+.stat-item p {
+    padding: 5px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+/* -------------------------- CLI -------------------------- */
+
+.cli .grid {
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+
+.cli .grid > *:first-child {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+/* -------------------------- Utilities -------------------------- */
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 1100px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3,1fr);
+}
+
+.card {
+    padding: 25px;
+    font-weight: 500;
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
+}
+
+.btn {
+    display: inline-block;
+    border: #fff solid 1px;
+    border-radius: 5px;
+    background-color: #047aed;
+    color: #fff;
+}
