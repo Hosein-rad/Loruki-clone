@@ -148,14 +148,10 @@ li {
 }
 
 .showcase-text .btn {
-    height: 40px;
-    width: 100px;
-    text-align: center;
-    padding: 8px 10px;
     margin: 10px 20px;
 }
 
-.showcase-text .btn:hover {
+.btn:hover {
     transform: scale(0.98);
 }
 
@@ -216,6 +212,143 @@ li {
     grid-row: 1 / span 2;
 }
 
+/* -------------------------- Cloud -------------------------- */
+
+.cloud {
+    background: linear-gradient(180deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(4, 122, 237, 0.5) 40%,
+        rgba(4, 122, 237, 0.8) 70%,
+        rgba(4, 122, 237, 1) 100%);
+    color: #fff;
+    padding-top: 30px;
+}
+
+.cloud .grid {
+    grid-template-columns: 4fr 3fr;
+}
+
+.cloud .container {
+    margin: 0 auto;
+    padding: 10px 30px;
+    text-align: center;
+}
+
+.cloud-texts h2 {
+    color: #002240;
+    font-weight: 300;
+    font-size: 50px;
+    margin: 20px 0;
+}
+
+.cloud-texts p {
+    font-weight: 300;
+    font-size: 25px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.cloud-texts .btn {
+    background-color: #002240;
+    margin: 10px;
+    border: none;
+}
+
+/* -------------------------- Languages -------------------------- */
+
+.languages {
+    background-color: #047aed;
+    margin: 0 auto;
+}
+
+.languages container {
+    height: 70px;
+    margin: 0 auto;
+}
+
+.languages h2 {
+    font-weight: 300;
+    font-size: 40px;
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.languages .flex {
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.languages .card {
+    margin: 15px 8px;
+    padding: 25px 20px;
+    transition: transform .2s ease-in;
+}
+
+.languages h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.languages .card:hover {
+    transform: translateY(-15px);
+}
+
+/* -------------------------- Footer -------------------------- */
+
+.footer {
+    background-color: #002240;
+    margin: 0 auto;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer .container {
+    background-color: #002240;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.footer h1 {
+    font-weight: 300;
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.footer p {
+    font-weight: 300;
+}
+
+.container:first-child {
+    margin-left: 25px;
+}
+
+.footer li {
+    margin: 10px 20px;
+}
+
+.footer i {
+    font-size: 35px;
+    margin: 0 10px;
+}
+
+.footer .fa-github:hover {
+    color: black;
+}
+
+.footer .fa-telegram:hover {
+    color: #24A1DE;
+}
+
+.footer .fa-whatsapp:hover {
+    color: #128c7e;
+
+}
+.footer .fa-instagram:hover {
+    color:  #c13584;
+}
+
 /* -------------------------- Utilities -------------------------- */
 
 .flex {
@@ -252,9 +385,13 @@ li {
 }
 
 .btn {
+    text-align: center;
     display: inline-block;
     border: #fff solid 1px;
     border-radius: 5px;
     background-color: #047aed;
     color: #fff;
+    width: 100px;
+    height: 40px;
+    padding: 8px;
 }
