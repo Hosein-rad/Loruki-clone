@@ -8,6 +8,7 @@
 
 body {
     font-family: "Lato", sans-serif;
+    width: auto;
 }
 
 img {
@@ -64,6 +65,7 @@ li {
     margin: 0;
     padding: 0;
     position: relative;
+    
 }
 
 .showcase .grid {
@@ -72,15 +74,15 @@ li {
 
 .showcase .container {
     height: 100%;
-    margin: 0 10px;
+    margin: 0 auto;
     width: 100%;
     justify-self: center;
 }
 
 .showcase-form {
     height: 350px;
-    width: 400px;
-    margin: 10px;
+    width: 30vw;
+    margin: 10px 15px;
     overflow: visible;
     z-index: 100;
     position: relative;
@@ -95,8 +97,8 @@ li {
     font-size: 30px;
 }
 
-.showcase input[type="text"],
-.showcase input[type="email"] {
+.showcase-form input[type="text"],
+.showcase-form input[type="email"] {
     font-size: 16px;
     width: 85%;
     border: unset;
@@ -125,13 +127,13 @@ li {
 }
 
 .showcase-text h2 {
-    margin: 30px 20px;
+    margin: 30px 0;
     font-weight: 300;
     font-size: 36px;
 }
 
 .showcase-text p {
-    margin: 10px 20px;
+    margin: 10px;
     font-weight: 300;
     font-size: 16px;
 }
@@ -173,14 +175,18 @@ li {
     text-align: center;
 }
 
+.stats .container {
+    margin: 30px auto;
+    padding: 30px 0;
+}
+
 .stats-header {
     max-width: 700px;
     margin: 10px auto;
-    padding: 60px 0;
+    padding: 20px 0;
     text-align: center;
     font-weight: 300;
     font-size: 27px;
-
 }
 
 .stats i {
@@ -202,6 +208,10 @@ li {
 
 /* -------------------------- CLI -------------------------- */
 
+.cli .container {
+    margin: 20px auto;
+}
+
 .cli .grid {
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
@@ -210,6 +220,11 @@ li {
 .cli .grid > *:first-child {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
+}
+
+.cli .card {
+    margin: 5px 30px;
+    text-align: center;
 }
 
 /* -------------------------- Cloud -------------------------- */
@@ -221,7 +236,7 @@ li {
         rgba(4, 122, 237, 0.8) 70%,
         rgba(4, 122, 237, 1) 100%);
     color: #fff;
-    padding-top: 30px;
+    padding: 30px 0;
 }
 
 .cloud .grid {
@@ -261,9 +276,9 @@ li {
     margin: 0 auto;
 }
 
-.languages container {
-    height: 70px;
-    margin: 0 auto;
+.languages .container {
+    margin: 30px auto;
+    padding: 30px 0;
 }
 
 .languages h2 {
@@ -320,8 +335,9 @@ li {
     font-weight: 300;
 }
 
-.container:first-child {
-    margin-left: 25px;
+.footer h1,
+.footer p {
+    margin-left: 20px;
 }
 
 .footer li {
@@ -359,14 +375,14 @@ li {
 
 .container {
     margin: 10px auto;
-    padding: 10px;
+    padding: 10px auto;
     max-width: 1100px;
+    width: 100%;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 20px;
     justify-content: center;
     align-items: center;
 }
@@ -394,4 +410,36 @@ li {
     width: 100px;
     height: 40px;
     padding: 8px;
+}
+
+/* -------------------------- Tablet and under -------------------------- */
+
+@media(max-width: 810px) {
+
+    .showcase {
+        text-align: center;
+        height: auto;
+        padding-top: 30px;
+    }
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .showcase-form {
+        justify-self: center;
+    }
+    .cli .container > *:first-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+}
+
+/* -------------------------- Mobile -------------------------- */
+
+@media(max-width: 768px) {
+    
 }
